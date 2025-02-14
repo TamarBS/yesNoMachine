@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<title>Máquina de Sí No</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    box-sizing:border-box;
+    overflow:hidden;
+    position: relative;
+  }
+  .machine {
+    background-color: rgb(247, 227, 119);
+    border: 15px solid rgb(168, 144, 63);
+    position: relative;
+    margin: auto;
+    padding: 60px 0px;
+    width: 320px;
+    max-width: 320px;
+    max-height: 520px;
+    border-radius: 200px;
+    box-shadow: 30px 10px 0px 0px rgba(255, 255, 255, 0.3) inset, 2px 2px 5px 0px rgba(255, 255, 255, 0.5) inset, 10px 10px 2px 2px rgba(123, 109, 35, 0.5);
+    z-index: 10;
+  }
+  .rectangle {
+    background-color: rgb(255, 249, 215);
+    width: 50%;
+    height: 200px;
+    border-radius: 0 200px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+  .green {
+    background-color: rgb(39, 240, 106);
+    border: 15px solid rgb(21, 96, 19);
+  }
+  .green a { color: rgb(8, 134, 43); }
+  .red {
+    background-color: rgb(233, 50, 117);
+    border: 15px solid rgb(85, 17, 23);
+  }
+  .red a { color: rgb(107, 14, 61); }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+  }
+  .button {
+    width: 210px;
+    max-width: 210px;
+    height: 210px;
+    max-height: 210px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.3) inset, 2px 2px 5px 0px rgba(255, 255, 255, 0.5) inset, -5px -5px 0px 0px rgba(7, 7, 7, 0.3) inset, 10px 10px 0px -5px rgba(25, 25, 25, 0.5);
+  }
+  .button:active{ box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.3) inset, 2px 2px 5px 0px rgba(0,0,0,0.5) inset, -5px -5px 0px 0px rgba(255, 255, 255, 0.3) inset; }
+  .button a {
+    text-decoration: none;
+    text-transform: none;
+    font-family: fantasy;
+    font-size: 150px;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.5), -1px -1px rgba(0, 0, 0, 0.5);
+  }
+  .button:active a { font-size: 140px; }
+
+</style>
+</head>
+<body>
+  <audio src="sfx-words-no4.mp3" id="no"></audio>
+  <audio src="sfx-words-yes4.mp3" id="yes"></audio>
+  <div class="machine">
+    <div class="rectangle"></div>
+    <div class="buttons">
+      <button class="button green" onclick="playYes()"><a href="">Y</a></button>
+      <button class="button red" onclick="playNo()"><a href="">N</a></button>
+    </div>
+  </div>
+  <script>
+    function playYes(){
+      document.getElementById("yes").play();
+    }
+    function playNo(){
+      document.getElementById("no").play();
+    }
+  </script>
+</body>
+</html>
