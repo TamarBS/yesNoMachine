@@ -65,16 +65,16 @@
     cursor: pointer;
     z-index: 10;
     box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0.3) inset, 2px 2px 5px 0px rgba(255, 255, 255, 0.5) inset, -5px -5px 0px 0px rgba(7, 7, 7, 0.3) inset, 10px 10px 0px -5px rgba(25, 25, 25, 0.5);
-  }
-  .button:active{ box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.3) inset, 2px 2px 5px 0px rgba(0,0,0,0.5) inset, -5px -5px 0px 0px rgba(255, 255, 255, 0.3) inset; }
-  .button a {
     text-decoration: none;
     text-transform: none;
     font-family: fantasy;
     font-size: 150px;
     text-shadow: 1px 1px rgba(255, 255, 255, 0.5), -1px -1px rgba(0, 0, 0, 0.5);
   }
-  .button:active a { font-size: 140px; }
+  .button:active{ 
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.3) inset, 2px 2px 5px 0px rgba(0,0,0,0.5) inset, -5px -5px 0px 0px rgba(255, 255, 255, 0.3) inset; 
+    font-size: 140px;
+  }
 
 </style>
 </head>
